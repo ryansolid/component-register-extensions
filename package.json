@@ -1,0 +1,51 @@
+{
+  "name": "component-register-extensions",
+  "version": "0.0.1",
+  "description": "Common extensions for Component Register",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryansolid/component-register-extensions.git"
+  },
+  "author": "Ryan Carniato <ryansolid@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryansolid/component-register-extensions/issues"
+  },
+  "readmeFilename": "README.md",
+  "main": "dist/node/index.js",
+  "module": "dist/es/index.js",
+  "babel": {
+    "ignore": [
+      "node_modules"
+    ],
+    "plugins": [
+      "add-module-exports"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "8.0.0"
+          }
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "build-es": "coffee --compile --bare --no-header --output dist/es/ src/",
+    "build-node": "coffee --compile --transpile --bare --no-header --output dist/node/ src/",
+    "prepare": "npm run build-es & npm run build-node"
+  },
+  "dependencies": {
+    "component-register": "beta",
+    "shady-css-parser": "0.1.x",
+    "html-parse-string": "*"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "coffeescript": "2.x"
+  }
+}
