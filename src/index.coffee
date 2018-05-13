@@ -1,5 +1,3 @@
-import EventsMixin from './mixins/events'
-import StylesMixin from './mixins/styles'
-import TimerMixin from './mixins/timer'
-
-export { EventsMixin, StylesMixin, TimerMixin }
+export { default as withEvents } from './mixins/withEvents'
+export { default as withTimer } from './mixins/withTimer'
+export { default as polyfillShadowStyles } from './mixins/polyfillShadowStyles'

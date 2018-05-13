@@ -1,6 +1,6 @@
 {
   "name": "component-register-extensions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Common extensions for Component Register",
   "repository": {
     "type": "git",
@@ -12,30 +12,10 @@
     "url": "https://github.com/ryansolid/component-register-extensions/issues"
   },
   "readmeFilename": "README.md",
-  "main": "dist/node/index.js",
-  "module": "dist/es/index.js",
-  "babel": {
-    "ignore": [
-      "node_modules"
-    ],
-    "plugins": [
-      "add-module-exports"
-    ],
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "8.0.0"
-          }
-        }
-      ]
-    ]
-  },
+  "main": "lib/index.js",
+  "module": "dist/index.js",
   "scripts": {
-    "build-es": "coffee --compile --bare --no-header --output dist/es/ src/",
-    "build-node": "coffee --compile --transpile --bare --no-header --output dist/node/ src/",
-    "prepare": "npm run build-es & npm run build-node"
+    "prepublishOnly": "rollup -c"
   },
   "dependencies": {
     "component-register": "beta",
@@ -43,9 +23,9 @@
     "html-parse-string": "*"
   },
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-preset-env": "^1.6.1",
-    "coffeescript": "2.x"
+    "coffeescript": "^2.2.3",
+    "rollup": "^0.58.1",
+    "rollup-plugin-coffee2": "^0.1.15",
+    "rollup-plugin-node-resolve": "^3.3.0"
   }
 }

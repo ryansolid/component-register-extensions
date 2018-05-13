@@ -1,4 +1,2 @@
-import css from './css-parser'
-import html from './html-parser'
-
-export { css, html }
+export { default as css } from './css'
+export { default as html } from './html'
