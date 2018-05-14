@@ -1,6 +1,6 @@
 {
   "name": "component-register-extensions",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Common extensions for Component Register",
   "repository": {
     "type": "git",
