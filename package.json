@@ -1,6 +1,6 @@
 {
   "name": "component-register-extensions",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Common extensions for Component Register",
   "repository": {
     "type": "git",
@@ -18,9 +18,8 @@
     "prepublishOnly": "rollup -c"
   },
   "dependencies": {
-    "component-register": "beta",
-    "shady-css-parser": "0.1.x",
-    "html-parse-string": "*"
+    "component-register": "^0.4.0",
+    "shady-css-parser": "0.1.x"
   },
   "devDependencies": {
     "coffeescript": "^2.2.3",

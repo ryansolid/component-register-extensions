@@ -21,6 +21,9 @@ class ComponentParser extends NodeFactory
       if part.indexOf('::slotted') isnt -1
         part = part.replace SLOTTED, (m, expr) => " > #{expr}"
         part += ":not([#{@identifier}])" if @identifier
+      unless @tagName
+        parts[i] = part
+        continue
       parts[i] = switch
         when part.indexOf(':host-context') isnt -1
           part.replace(HOSTCONTEXT, (m, c, expr) => "#{@tagName}#{expr}") +
@@ -33,7 +36,7 @@ class ComponentParser extends NodeFactory
     selector = parts.join(',')
     super(selector, rulelist)
 
-export default (scope, styles, identifier) ->
+export default (styles, scope, identifier) ->
   parser = new Parser(new ComponentParser(scope, identifier))
   parsed = parser.parse(styles)
   return (new Stringifier()).stringify(parsed)
