@@ -14,7 +14,7 @@ requestCSSId = (key) ->
   cssId
 
 parseNodes = (nodes) ->
-  for node in nodes when node.nodeType is 1 and cssId = (host = node.getRootNode()?.host)._cssId
+  for node in nodes when node.nodeType is 1 and cssId = (host = node.getRootNode()?.host)?._cssId
     if node.nodeName is 'STYLE'
       unless document.getElementById(cssId)
         scope = if host.nodeName.indexOf('-') > -1 then host.nodeName.toLowerCase()
@@ -27,7 +27,7 @@ parseNodes = (nodes) ->
     parseNodes(node.childNodes) if node.childNodes.length
   return
 
-# real time node updates, necessary for JSX
+# real time node updates
 applyCSSPolyfill = (element = document.body) ->
   return if Utils.nativeShadowDOM
   observer = new MutationObserver (mutations) ->
