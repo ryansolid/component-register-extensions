@@ -1,8 +1,7 @@
-import coffee2 from 'rollup-plugin-coffee2';
 import nodeResolve from 'rollup-plugin-node-resolve';
 
 export default {
-  input: 'src/index.coffee',
+  input: 'src/index.js',
   output: [{
     file: 'lib/index.js',
     format: 'cjs',
@@ -13,7 +12,6 @@ export default {
   }],
   external: ['component-register', 'shady-css-parser', 'html-parse-string'],
   plugins: [
-    coffee2(),
-    nodeResolve({ extensions: ['.js', '.coffee'] })
+    nodeResolve({ extensions: ['.js'] })
   ]
 };

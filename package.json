@@ -1,6 +1,6 @@
 {
   "name": "component-register-extensions",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Common extensions for Component Register",
   "repository": {
     "type": "git",
@@ -18,13 +18,13 @@
     "prepublishOnly": "rollup -c"
   },
   "dependencies": {
-    "component-register": "^0.4.0",
     "shady-css-parser": "0.1.x"
   },
+  "peerDependencies": {
+    "component-register": "~0.5.0"
+  },
   "devDependencies": {
-    "coffeescript": "^2.2.3",
     "rollup": "^0.58.1",
-    "rollup-plugin-coffee2": "^0.1.15",
     "rollup-plugin-node-resolve": "^3.3.0"
   }
 }
