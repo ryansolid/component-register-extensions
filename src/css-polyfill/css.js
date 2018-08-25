@@ -66,7 +66,7 @@ class ComponentParser extends NodeFactory {
 }
 
 export default function (styles, scope, identifier) {
-  parser = new Parser(new ComponentParser(scope, identifier));
-  parsed = parser.parse(styles);
+  const parser = new Parser(new ComponentParser(scope, identifier));
+  const parsed = parser.parse(styles);
   return (new Stringifier()).stringify(parsed);
 }

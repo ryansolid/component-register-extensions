@@ -3,7 +3,7 @@ import { createMixin } from 'component-register';
 export default createMixin( options => {
   const { element } = options;
   const events = {
-    trigger(name, options={}) { return element.trigger(options); },
+    trigger(name, detail, options={}) { return element.trigger(name, { ...options, detail }); },
 
     forward(name) {
       events.on(name, ({detail, bubbles, cancelable, composed}) =>

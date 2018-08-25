@@ -40,7 +40,7 @@ function parseNodes(nodes) {
 export function applyCSSPolyfill(element = document.body) {
   if (nativeShadowDOM) return;
   const observer = new MutationObserver(mutations => {
-    for(let i = 0; l = mutations.length; i < l, i++) {
+    for(let i = 0, l = mutations.length; i < l; i++) {
       if (mutations[i].addedNodes) parseNodes(mutations[i].addedNodes);
     }
   });
