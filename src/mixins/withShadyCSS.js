@@ -1,4 +1,4 @@
-import { createMixin} from 'component-register';
+import { createMixin } from 'component-register';
 import { requestCSSId } from '../css-polyfill';
 
 export default createMixin( options => {

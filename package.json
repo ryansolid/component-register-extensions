@@ -1,6 +1,6 @@
 {
   "name": "component-register-extensions",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "Common extensions for Component Register",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "component-register": "~0.5.0"
   },
   "devDependencies": {
-    "rollup": "^0.58.1",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup": "^0.66.1",
+    "rollup-plugin-node-resolve": "^3.4.0"
   }
 }

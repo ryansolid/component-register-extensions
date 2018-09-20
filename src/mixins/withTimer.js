@@ -1,4 +1,4 @@
-import { isFunction, createMixin} from 'component-register';
+import { isFunction, createMixin } from 'component-register';
 
 export default createMixin( options => {
   const { element } = options;
