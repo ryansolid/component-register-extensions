@@ -13,6 +13,10 @@ export function requestCSSId(key) {
   return cssId;
 }
 
+export function assignCSSId(element, key) {
+  element._cssId = requestCSSId(key);
+}
+
 function parseNodes(nodes) {
   nodes.forEach(node => {
     if (node.nodeType !== 1) return;

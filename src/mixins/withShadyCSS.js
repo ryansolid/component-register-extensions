@@ -1,8 +1,8 @@
 import { createMixin } from 'component-register';
-import { requestCSSId } from '../css-polyfill';
+import { assignCSSId } from '../css-polyfill';
 
 export default createMixin( options => {
   const { element } = options;
-  element._cssId = requestCSSId(element.nodeName);
+  assignCSSId(element, element.nodeName);
   return options;
 });
