@@ -2,6 +2,10 @@
 
 This package includes a few mixins for Component Register.
 
+## withProps(fn)
+
+fn is a function at that returns an object to merge into the components prop options.
+
 ## withEvents
 
 Provides a 'events' as a property to your component with a number of event helpers.
@@ -16,9 +20,9 @@ Provides mechanism to polyfill shadydom css in unsupporting browsers. Registers 
 
 This library also exposes the CSS Polyfill directly with:
 
-## requestCSSId(key)
+## assignCSSId(element, key)
 
-Pass in a key and it will return a new or an existing identifier for that key to set on your element as element._cssId. withShadyCSS does this for you automatically for your custom elements. One limitation is this polyfill only supports a single style tag per shadowroot.
+Pass in a element and key and it will assign a CSSId for the CSSPolyfill. withShadyCSS does this for you automatically for your custom elements. One limitation is this polyfill only supports a single style tag per shadowroot.
 
 ## applyCSSPolyfill
 
