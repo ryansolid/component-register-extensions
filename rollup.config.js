@@ -10,7 +10,7 @@ export default {
     file: 'dist/index.js',
     format: 'es'
   }],
-  external: ['component-register', 'shady-css-parser', 'html-parse-string'],
+  external: ['component-register', 'shady-css-parser-es'],
   plugins: [
     nodeResolve({ extensions: ['.js'] })
   ]

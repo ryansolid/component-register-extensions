@@ -1,4 +1,4 @@
-import { NodeFactory, Parser, Stringifier } from 'shady-css-parser';
+import { NodeFactory, Parser, Stringifier } from 'shady-css-parser-es';
 
 const SLOTTED = /(?:::slotted)(?:\(((?:\([^)(]*\)|[^)(]*)+?)\))/
 const HOST = /(:host)(?:\(((?:\([^)(]*\)|[^)(]*)+?)\))/
