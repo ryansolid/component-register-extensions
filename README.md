@@ -1,10 +1,10 @@
 # Component Register Extensions
 
-This package includes a few mixins for Component Register.
+This package includes a few mixins(HOCs) for Component Register.
 
-## withProps(fn)
+## withOptions(fn)
 
-fn is a function at that returns an object to merge into the components prop options.
+fn is a function at that returns an object to merge into the components options.
 
 ## withEvents
 
@@ -26,4 +26,4 @@ Pass in a element and key and it will assign a CSSId for the CSSPolyfill. withSh
 
 ## applyCSSPolyfill
 
-This method uses a mutation observer to transform elements and style tags to work with the updated scoped styles. You must call this on application startup for the polyfill to work.
+This method uses a mutation observer to transform elements and style tags to work with the updated scoped styles. You must call this on application startup for the polyfill to work both directly and withShadyCSS.

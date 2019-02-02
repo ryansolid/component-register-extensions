@@ -1,6 +1,6 @@
 {
   "name": "component-register-extensions",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Common extensions for Component Register",
   "repository": {
     "type": "git",
@@ -22,10 +22,10 @@
     "shady-css-parser-es": "0.1.x"
   },
   "peerDependencies": {
-    "component-register": "~0.5.0"
+    "component-register": "~0.6.0"
   },
   "devDependencies": {
-    "rollup": "^0.67.0",
-    "rollup-plugin-node-resolve": "^3.4.0"
+    "rollup": "^1.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
   }
 }
