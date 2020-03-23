@@ -12,11 +12,11 @@ export default createMixin( options => {
     },
     // handles child events for delegation
     on(name, handler) {
-      element.renderRoot().addEventListener(name, handler);
-      element.addReleaseCallback(() => element.renderRoot().removeEventListener(name, handler));
+      element.renderRoot.addEventListener(name, handler);
+      element.addReleaseCallback(() => element.renderRoot.removeEventListener(name, handler));
     },
 
-    off(name, handler) { element.renderRoot().removeEventListener(name, handler); },
+    off(name, handler) { element.renderRoot.removeEventListener(name, handler); },
 
     listenTo(emitter, key, fn) {
       emitter.on(key, fn);
