@@ -6,7 +6,7 @@ export default createMixin(options => {
     trigger(
       name,
       detail,
-      options = { bubble: true, cancelable: true, composed: true }
+      options = { bubbles: true, cancelable: true, composed: true }
     ) {
       const event = new CustomEvent(name, {
         ...options,
